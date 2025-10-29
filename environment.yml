@@ -1,0 +1,10 @@
+name: textutils
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pytest=8.4.2
+  - pytest-cov=7.0.0
+  - pandas=2.2.3
+  - numpy=2.1.2
