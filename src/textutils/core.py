@@ -1,4 +1,4 @@
-def word_count(text: str) -> int:
-    #Count the number of words in a given text
+def word_count(text):
+    # Count the number of words in the given text
     words = text.split()
     return len(words)
