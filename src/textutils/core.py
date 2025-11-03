@@ -61,3 +61,12 @@ def truncatestring(text, max_length):
     if len(text) <= max_length:
         return text
     return text[:max_length]
+
+def count_vowels(text):
+    # Count the number of vowels in the text
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
