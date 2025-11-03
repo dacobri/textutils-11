@@ -49,6 +49,7 @@ def compare_texts(text1: str, text2: str) -> float:
     if not union:
         return 1.0
     return len(set1 & set2) / len(union)
+
 def is_palindrome(sentence):
     # Remove spaces and convert to lowercase
     cleaned = sentence.replace(" ", "").lower()

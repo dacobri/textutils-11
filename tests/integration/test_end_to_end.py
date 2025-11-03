@@ -26,3 +26,9 @@ def test_full_text_pipeline():
     # intersection = 2, union = 3 -> 2/3
     sim = c.compare_texts(text1, text2)
     assert sim == 2/3
+
+
+    # 6) is_palindrome: works after cleaning spaces and casing
+    assert c.is_palindrome("Race car") is True
+    assert c.is_palindrome("Python") is False
+    assert c.is_palindrome("") is True
