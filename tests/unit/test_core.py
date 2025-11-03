@@ -1,5 +1,6 @@
 import textutils.core as c
 from textutils.core import is_palindrome
+from textutils.core import word_count
 
 def test_unique_words_sorted_and_lowercase(): 
     result = c.unique_words("Dog dog Cat") 
@@ -35,3 +36,18 @@ def test_is_palindrome_false():
 def test_is_palindrome_empty_or_single_char():
     assert is_palindrome("") is True     # empty string counts as palindrome
     assert is_palindrome("a") is True  
+
+def test_word_count():
+    # Test 1: Simple sentence
+    assert word_count("Hello world") == 2
+
+    # Test 2: Sentence with punctuation
+    assert word_count("Artificial intelligence, machine learning, and data science!") == 7
+
+    # Test 3: Sentence with multiple spaces
+    assert word_count("  This   has   extra   spaces  ") == 4
+
+    # Test 4: Empty string
+    assert word_count("") == 0
+
+    print("All tests passed!")

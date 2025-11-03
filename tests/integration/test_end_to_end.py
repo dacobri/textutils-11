@@ -13,6 +13,11 @@ def test_full_text_pipeline():
     count2 = c.word_count(text2)
     assert count2 == 3
 
+    # Extra: additional tests for word_count
+    assert c.word_count("") == 0
+    assert c.word_count("   spaced   words   ") == 2
+    assert c.word_count("One two three four five") == 5
+
     # 3) tokenize: punctuation removed, lowercase words kept
     assert c.tokenize("Hello, world!! 42") == ["hello", "world", "42"]
 
