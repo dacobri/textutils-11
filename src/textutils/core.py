@@ -55,3 +55,9 @@ def is_palindrome(sentence):
     cleaned = sentence.replace(" ", "").lower()
     # Check if the cleaned string reads the same forwards and backwards
     return cleaned == cleaned[::-1]
+
+def truncatestring(text, max_length):
+    # Truncate the string to the specified maximum length
+    if len(text) <= max_length:
+        return text
+    return text[:max_length]
