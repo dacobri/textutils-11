@@ -1,6 +1,7 @@
 import textutils.core as c
 from textutils.core import is_palindrome
 from textutils.core import word_count
+from textutils.core import truncatestring
 
 def test_unique_words_sorted_and_lowercase(): 
     result = c.unique_words("Dog dog Cat") 
@@ -51,3 +52,24 @@ def test_word_count():
     assert word_count("") == 0
 
     print("All tests passed!")
+
+
+def test_truncatestring_short_text():
+    # Text shorter than max_length → unchanged
+    assert truncatestring("hello", 10) == "hello"
+
+def test_truncatestring_exact_length():
+    # Text exactly equal to max_length → unchanged
+    assert truncatestring("hello", 5) == "hello"
+
+def test_truncatestring_long_text():
+    # Text longer than max_length → truncated
+    assert truncatestring("hello world", 5) == "hello"
+
+def test_truncatestring_empty_text():
+    # Empty text should remain empty
+    assert truncatestring("", 5) == ""
+
+def test_truncatestring_zero_length():
+    # max_length = 0 should return an empty string
+    assert truncatestring("abcdef", 0) == ""

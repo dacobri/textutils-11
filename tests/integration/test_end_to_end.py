@@ -37,3 +37,9 @@ def test_full_text_pipeline():
     assert c.is_palindrome("Race car") is True
     assert c.is_palindrome("Python") is False
     assert c.is_palindrome("") is True
+
+    # 7) truncatestring: trims to max length, keeps shorter/empty as-is
+    assert c.truncatestring("hello world", 5) == "hello"
+    assert c.truncatestring("hello", 5) == "hello"
+    assert c.truncatestring("", 3) == ""
+    assert c.truncatestring("abcdef", 0) == ""
