@@ -57,10 +57,19 @@ def is_palindrome(sentence):
     return cleaned == cleaned[::-1]
 
 def truncatestring(text, max_length):
-    # Truncate the string to the specified maximum length
+    # If text fits, return it as-is
     if len(text) <= max_length:
         return text
     return text[:max_length]
+
+def count_vowels(text):
+    # Count the number of vowels in the text
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
 
 def count_vowels(text):
     # Count the number of vowels in the text

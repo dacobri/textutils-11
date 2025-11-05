@@ -11,6 +11,39 @@ def test_unique_words_trims_spaces():
     result = c.unique_words(" hi hi ") 
     assert result == ["hi"]
 
+def test_unique_words_invalid_type():
+    try:
+        c.unique_words(123)
+        assert False, "Expected TypeError for non-string input"
+    except TypeError:
+        assert True
+
+def test_is_anagram_invalid_first_argument():
+    try:
+        c.is_anagram(123, "abc")
+        assert False, "Expected TypeError for first argument"
+    except TypeError:
+        assert True
+
+def test_is_anagram_invalid_second_argument():
+    try:
+        c.is_anagram("abc", 456)
+        assert False, "Expected TypeError for second argument"
+    except TypeError:
+        assert True
+
+def test_truncatestring_negative_length():
+    # Negative max_length should return an empty string
+    assert c.truncatestring("hello", -5) == ""
+
+def test_capitalize_text():
+    # Capitalizes each word correctly
+    assert c.capitalize_text("hello world") == "Hello World"
+    # Empty string remains unchanged
+    assert c.capitalize_text("") == ""
+    # Multiple words capitalize properly
+    assert c.capitalize_text("python for data science") == "Python For Data Science"
+
 def test_compare_texts_identical():
     t = "a b c"
     assert c.compare_texts(t, t) == 1.0
