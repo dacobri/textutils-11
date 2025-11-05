@@ -70,4 +70,24 @@ def count_vowels(text):
         if char in vowels:
             count += 1
     return count
+#text pipeline
+def to_lowercase(text):
+    #Turn all letters into lowercase.
+    return text.lower()
+
+def remove_spaces(text):
+    #Remove all spaces from the text.
+    return text.replace(" ", "")
+
+def add_exclamation(text):
+    #Add an exclamation mark at the end.
+    return text + "!"
+
+def text_pipeline(*funcs):
+    #Combine several simple text functions into one.
+    def process(text):
+        for f in funcs:
+            text = f(text)
+        return text
+    return process
 
