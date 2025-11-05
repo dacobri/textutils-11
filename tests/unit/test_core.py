@@ -150,4 +150,3 @@ def test_add_exclamation():
     assert c.add_exclamation("wow!") == "wow!!"
     # Test with empty string
     assert c.add_exclamation("") == "!"
-

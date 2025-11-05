@@ -84,6 +84,3 @@ def remove_spaces(text):
 def add_exclamation(text):
     #Add an exclamation mark at the end.
     return text + "!"
-
-
-

@@ -73,4 +73,3 @@ def test_text_pipeline_end_to_end():
 
     # Final check
     assert final == "helloworld!"
-
