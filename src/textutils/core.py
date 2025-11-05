@@ -71,11 +71,3 @@ def count_vowels(text):
             count += 1
     return count
 
-def count_vowels(text):
-    # Count the number of vowels in the text
-    vowels = "aeiouAEIOU"
-    count = 0
-    for char in text:
-        if char in vowels:
-            count += 1
-    return count
