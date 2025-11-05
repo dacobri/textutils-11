@@ -36,7 +36,7 @@ Implemented by Caroline Wheeler
 Extracts all distinct words from a given text, converts them to lowercase, and returns them in alphabetical order for easier analysis.
 
 word_count(text)
-Developed by Francesco Colpimeni
+Developed by Francesco Polimeni
 Calculates the total number of words in a string, serving as a foundational metric for text analytics.
 
 is_anagram(text1, text2)
@@ -44,7 +44,7 @@ Created by Brice Da Costa and refined with input from Caroline Wheeler
 Determines whether two strings are anagrams by comparing their character compositions after normalization.
 
 capitalize_text(text)
-Written by Francesco Colpimeni
+Written by Francesco Polimeni
 Ensures that each word in the given text begins with a capital letter, improving readability and consistency.
 
 tokenize(text)
@@ -52,20 +52,24 @@ Contributed collaboratively across the team
 Cleans and standardizes input text by converting all characters to lowercase and removing punctuation, returning a structured list of alphanumeric tokens.
 
 compare_texts(text1, text2)
-Implemented by Simon Melk
+Implemented by Simon
 Measures the textual similarity between two strings based on the ratio of shared unique words to all unique words.
 
 is_palindrome(text)
-Authored by Francesco Colpimeni
+Authored by Francesco Polimeni
 Checks whether a sentence reads the same forwards and backwards, ignoring case and spaces.
 
 truncatestring(text, max_length)
 Developed jointly by all team members
 Shortens a text string to a defined maximum length and appends an ellipsis (...) when truncation occurs, ensuring the output remains readable.
 
+count_vowels(text)
+Written by Francesco Polimeni
+Counts the total number of vowels (a, e, i, o, u) in the provided text, regardless of case, offering a simple way to measure text composition.
+
 
 # Team Members - GitHub Username
 Caroline Wheeler - carolinesofiawheeler
-Francesco Colpimeni - francescocolpimeni05-cmd
+Francesco Polimeni - francescopolimeni05-cmd
 Brice Da Costa - dacobri
 Simon - smelkk
