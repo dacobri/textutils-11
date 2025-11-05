@@ -106,3 +106,13 @@ def test_truncatestring_empty_text():
 def test_truncatestring_zero_length():
     # max_length = 0 should return an empty string
     assert truncatestring("abcdef", 0) == ""
+
+def test_count_vowels():
+    # Test with mixed case and punctuation
+    assert c.count_vowels("Hello, World!") == 3  # e, o, o
+    # Test with no vowels
+    assert c.count_vowels("rhythm") == 0
+    # Test with all vowels
+    assert c.count_vowels("AEIOUaeiou") == 10
+    # Test with empty string
+    assert c.count_vowels("") == 0
