@@ -1,5 +1,7 @@
-#Checking for unique words in a text
+#Main text processing module containing all core utility functions for text manipulation and analysis.
+
 def unique_words(text):
+    #Checking for unique words in a text
     if type(text) != str:
         raise TypeError("Input must be a string")
     words = text.lower().split()
@@ -70,7 +72,7 @@ def count_vowels(text):
         if char in vowels:
             count += 1
     return count
-#text pipeline
+
 def to_lowercase(text):
     #Turn all letters into lowercase.
     return text.lower()
@@ -83,11 +85,5 @@ def add_exclamation(text):
     #Add an exclamation mark at the end.
     return text + "!"
 
-def text_pipeline(*funcs):
-    #Combine several simple text functions into one.
-    def process(text):
-        for f in funcs:
-            text = f(text)
-        return text
-    return process
+
 

@@ -1,7 +1,6 @@
+#Unit tests for individual functions in core.py to ensure correctness and handle edge cases.
+
 import textutils.core as c
-from textutils.core import is_palindrome
-from textutils.core import word_count
-from textutils.core import truncatestring
 
 def test_unique_words_sorted_and_lowercase(): 
     result = c.unique_words("Dog dog Cat") 
@@ -59,53 +58,54 @@ def test_compare_texts_empty_cases():
     
 
 def test_is_palindrome_true():
-    assert is_palindrome("Race car") is True
-    assert is_palindrome("madam") is True
-    assert is_palindrome("A man a plan a canal Panama") is True
+    assert c.is_palindrome("Race car") is True
+    assert c.is_palindrome("madam") is True
+    assert c.is_palindrome("A man a plan a canal Panama") is True
 
 def test_is_palindrome_false():
-    assert is_palindrome("hello") is False
-    assert is_palindrome("Python") is False
+    assert c.is_palindrome("hello") is False
+    assert c.is_palindrome("Python") is False
 
 def test_is_palindrome_empty_or_single_char():
-    assert is_palindrome("") is True     # empty string counts as palindrome
-    assert is_palindrome("a") is True  
+    assert c.is_palindrome("") is True     # empty string counts as palindrome
+    assert c.is_palindrome("a") is True  
 
 def test_word_count():
     # Test 1: Simple sentence
-    assert word_count("Hello world") == 2
+    assert c.word_count("Hello world") == 2
 
     # Test 2: Sentence with punctuation
-    assert word_count("Artificial intelligence, machine learning, and data science!") == 7
+    assert c.word_count("Artificial intelligence, machine learning, and data science!") == 7
 
     # Test 3: Sentence with multiple spaces
-    assert word_count("  This   has   extra   spaces  ") == 4
+    assert c.word_count("  This   has   extra   spaces  ") == 4
 
     # Test 4: Empty string
-    assert word_count("") == 0
+    assert c.word_count("") == 0
 
     print("All tests passed!")
 
 
+
 def test_truncatestring_short_text():
     # Text shorter than max_length → unchanged
-    assert truncatestring("hello", 10) == "hello"
+    assert c.truncatestring("hello", 10) == "hello"
 
 def test_truncatestring_exact_length():
     # Text exactly equal to max_length → unchanged
-    assert truncatestring("hello", 5) == "hello"
+    assert c.truncatestring("hello", 5) == "hello"
 
 def test_truncatestring_long_text():
     # Text longer than max_length → truncated
-    assert truncatestring("hello world", 5) == "hello"
+    assert c.truncatestring("hello world", 5) == "hello"
 
 def test_truncatestring_empty_text():
     # Empty text should remain empty
-    assert truncatestring("", 5) == ""
+    assert c.truncatestring("", 5) == ""
 
 def test_truncatestring_zero_length():
     # max_length = 0 should return an empty string
-    assert truncatestring("abcdef", 0) == ""
+    assert c.truncatestring("abcdef", 0) == ""
 
 def test_word_count_basic():
     text = "This is a simple test"
@@ -120,3 +120,34 @@ def test_count_vowels():
     assert c.count_vowels("AEIOUaeiou") == 10
     # Test with empty string
     assert c.count_vowels("") == 0
+
+def test_to_lowercase():
+    # Test with mixed case
+    assert c.to_lowercase("HeLLo WoRLD") == "hello world"
+    # Test with all uppercase
+    assert c.to_lowercase("PYTHON") == "python"
+    # Test with all lowercase (should stay the same)
+    assert c.to_lowercase("already lowercase") == "already lowercase"
+    # Test with empty string
+    assert c.to_lowercase("") == ""
+
+def test_remove_spaces():
+    # Test with regular spaces
+    assert c.remove_spaces("hello world") == "helloworld"
+    # Test with multiple spaces
+    assert c.remove_spaces("a  b   c") == "abc"
+    # Test with no spaces
+    assert c.remove_spaces("nospace") == "nospace"
+    # Test with empty string
+    assert c.remove_spaces("") == ""
+
+def test_add_exclamation():
+    # Test with a normal word
+    assert c.add_exclamation("hello") == "hello!"
+    # Test with sentence
+    assert c.add_exclamation("this is fun") == "this is fun!"
+    # Test when it already ends with "!"
+    assert c.add_exclamation("wow!") == "wow!!"
+    # Test with empty string
+    assert c.add_exclamation("") == "!"
+
