@@ -106,3 +106,7 @@ def test_truncatestring_empty_text():
 def test_truncatestring_zero_length():
     # max_length = 0 should return an empty string
     assert truncatestring("abcdef", 0) == ""
+
+def test_word_count_basic():
+    text = "This is a simple test"
+    assert c.word_count(text) == 5
