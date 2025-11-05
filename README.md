@@ -6,27 +6,27 @@ This project was created as part of the Python for Data course to practice Git c
 # Environment Setup
 To recreate the development environment used for this project:
 1.	Clone the repository:
-git clone https://github.com/dacobri/textutils-11.git 
-cd textutils-11/textutils
+"git clone https://github.com/dacobri/textutils-11.git"
+"cd textutils-11/textutils"
 
 2.	Create the environment using the provided environment.yml file:
-micromamba create -n textutils -f environment.yml
-micromamba activate textutil
+"micromamba create -n textutils -f environment.yml"
+"micromamba activate textutil"
 
 
 # Installation
 Once the environment is active, install the package in editable mode:
-pip install -e .
+"pip install -e ."
 
 This allows you to make changes to the source code and test them immediately without reinstalling.
 
 
 # Running Tests
 To verify that all functions work as intended, run:
-pytest
+"pytest"
 
 For a coverage report:
-pytest --cov
+"pytest --cov"
 
 
 # Implemented Features
