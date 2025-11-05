@@ -43,3 +43,10 @@ def test_full_text_pipeline():
     assert c.truncatestring("hello", 5) == "hello"
     assert c.truncatestring("", 3) == ""
     assert c.truncatestring("abcdef", 0) == ""
+
+    # 8) count_vowels: correctly counts vowels (both upper and lower case)
+    assert c.count_vowels("Hello, World!") == 3   # e, o, o
+    assert c.count_vowels("rhythm") == 0          # no vowels
+    assert c.count_vowels("AEIOUaeiou") == 10     # all vowels
+    assert c.count_vowels("") == 0                # empty string
+
