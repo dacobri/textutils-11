@@ -57,9 +57,12 @@ def is_palindrome(sentence):
     return cleaned == cleaned[::-1]
 
 def truncatestring(text, max_length):
-    # Truncate the string to the specified maximum length
+    # If text fits, return it as-is
     if len(text) <= max_length:
         return text
-    if max_length <= 3:
+    # If max_length is 0 or less, return empty
+    elif max_length <= 0:
+        return ""
+    else:
         return text[:max_length]
-    return text[:max_length - 3] + "..."
+
