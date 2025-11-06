@@ -1,7 +1,7 @@
-# textutils-11
-# Group 11 - Python for Data Science Assignment 1
+# Group 11 — Python for Data Science Assignment 1
 
-This project was created as part of the Python for Data course to practice Git collaboration, environment management, and collective software development workflows. Together, our team built and tested a small Python package called textutils, which performs a variety of text-processing functions.
+This repository was created as part of the Python for Data Science course to practice Git collaboration, environment management, and test-driven development (TDD).
+Our team built a small Python package — textutils — that performs various text-processing operations with both unit and integration tests to ensure functionality and maintainability.
 
 # Environment Setup
 To recreate the development environment used for this project:
@@ -28,44 +28,60 @@ To verify that all functions work as intended, run:
 For a coverage report:
 "pytest --cov"
 
+For specific tests (for example, only integration):
+pytest -k full_text_pipeline
 
 # Implemented Features
-
 unique_words(text)
 Implemented by Caroline Wheeler
-Extracts all distinct words from a given text, converts them to lowercase, and returns them in alphabetical order for easier analysis.
+Returns a sorted list of distinct, lowercase words found in the text.
 
 word_count(text)
 Developed by Francesco Polimeni
-Calculates the total number of words in a string, serving as a foundational metric for text analytics.
+Returns the total number of words in the string (whitespace-separated), handling extra spaces cleanly.
 
 is_anagram(text1, text2)
 Created by Brice Da Costa and refined with input from Caroline Wheeler
-Determines whether two strings are anagrams by comparing their character compositions after normalization.
+Checks whether two texts are anagrams ignoring spaces and case.
 
 capitalize_text(text)
 Written by Francesco Polimeni
-Ensures that each word in the given text begins with a capital letter, improving readability and consistency.
+Returns the text with each word capitalized (title-style).
 
 tokenize(text)
 Contributed collaboratively across the team
-Cleans and standardizes input text by converting all characters to lowercase and removing punctuation, returning a structured list of alphanumeric tokens.
+Converts to lowercase, removes punctuation, and returns a list of alphanumeric tokens.
 
 compare_texts(text1, text2)
 Implemented by Simon
-Measures the textual similarity between two strings based on the ratio of shared unique words to all unique words.
+Computes similarity as |common unique words| ÷ |all unique words| (Jaccard ratio).
 
 is_palindrome(text)
 Authored by Francesco Polimeni
-Checks whether a sentence reads the same forwards and backwards, ignoring case and spaces.
+Returns True if the text reads the same forward and backward, ignoring spaces and case.
 
 truncatestring(text, max_length)
 Developed jointly by all team members
-Shortens a text string to a defined maximum length and appends an ellipsis (...) when truncation occurs, ensuring the output remains readable.
+Returns the text truncated to max_length characters (no ellipsis added). If shorter, returns unchanged.
 
 count_vowels(text)
 Written by Francesco Polimeni
-Counts the total number of vowels (a, e, i, o, u) in the provided text, regardless of case, offering a simple way to measure text composition.
+Counts the number of vowels (a, e, i, o, u) in the text, case-insensitive.
+
+
+# Testing Overview
+Unit tests (in tests/unit/test_core.py) verify each function individually.
+
+Integration test (in tests/integration/test_end_to_end.py) checks that all functions work together within a complete text-processing workflow.
+
+The Jupyter Notebook (A1.ipynb) documents the development and testing process step by step.
+
+
+# Project Highlights
+- Applied TDD (Test-Driven Development) and Git branching workflow.
+- Demonstrated team collaboration via individual feature branches and merges.
+- Built a reproducible Python environment using micromamba and pyproject.toml configuration.
+- Ensured software reliability through pytest unit and integration tests.
 
 
 # Team Members - GitHub Username
