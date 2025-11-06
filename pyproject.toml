@@ -24,3 +24,10 @@ include = ["textutils*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/textutils"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
