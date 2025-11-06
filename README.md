@@ -68,6 +68,17 @@ count_vowels(text)
 Written by Francesco Polimeni
 Counts the number of vowels (a, e, i, o, u) in the text, case-insensitive.
 
+to_lowercase(text)
+Written by Francesco Polimeni
+Converts all characters in the text to lowercase, ensuring uniform casing for text analysis.
+
+remove_spaces(text)
+Written by Francesco Colpimeni
+Removes all spaces from the text, returning a continuous string with no whitespace characters.
+
+add_exclamation(text)
+Written by Francesco Colpimeni
+Appends an exclamation mark to the end of the text, adding emphasis or excitement to the output.
 
 # Testing Overview
 Unit tests (in tests/unit/test_core.py) verify each function individually.
@@ -85,7 +96,7 @@ The Jupyter Notebook (A1.ipynb) documents the development and testing process st
 
 
 # Team Members - GitHub Username
-Caroline Wheeler - carolinesofiawheeler
+Caroline Wheeler - carolinewheeler333
 Francesco Polimeni - francescopolimeni05-cmd
 Brice Da Costa - dacobri
 Simon - smelkk
