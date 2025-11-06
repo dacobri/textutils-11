@@ -7,11 +7,11 @@ Our team built a small Python package — textutils — that performs various te
 To recreate the development environment used for this project:
 1.	Clone the repository:
 "git clone https://github.com/dacobri/textutils-11.git"
-"cd textutils-11/textutils"
+"cd textutils-11"
 
 2.	Create the environment using the provided environment.yml file:
 "micromamba create -n textutils -f environment.yml"
-"micromamba activate textutil"
+"micromamba activate textutils"
 
 
 # Installation
@@ -53,7 +53,7 @@ Contributed collaboratively across the team
 Converts to lowercase, removes punctuation, and returns a list of alphanumeric tokens.
 
 compare_texts(text1, text2)
-Implemented by Simon
+Implemented by Simon Melkonyan
 Computes similarity as |common unique words| ÷ |all unique words| (Jaccard ratio).
 
 is_palindrome(text)
@@ -73,20 +73,22 @@ Written by Francesco Polimeni
 Converts all characters in the text to lowercase, ensuring uniform casing for text analysis.
 
 remove_spaces(text)
-Written by Francesco Colpimeni
+Written by Francesco Polimeni
 Removes all spaces from the text, returning a continuous string with no whitespace characters.
 
 add_exclamation(text)
-Written by Francesco Colpimeni
+Written by Francesco Polimeni
 Appends an exclamation mark to the end of the text, adding emphasis or excitement to the output.
 
 # Testing Overview
 Unit tests (in tests/unit/test_core.py) verify each function individually.
 
-Integration test (in tests/integration/test_end_to_end.py) checks that all functions work together within a complete text-processing workflow.
+Integration tests (in tests/integration/test_end_to_end.py) check that all functions work together within a complete text-processing workflow.
 
 The Jupyter Notebook (A1.ipynb) documents the development and testing process step by step.
 
+# Results
+All 33 tests passed successfully with **100% coverage** on Python 3.12 (pytest 8.4.2, pytest-cov 7.0.0).
 
 # Project Highlights
 - Applied TDD (Test-Driven Development) and Git branching workflow.
@@ -99,4 +101,4 @@ The Jupyter Notebook (A1.ipynb) documents the development and testing process st
 Caroline Wheeler - carolinewheeler333
 Francesco Polimeni - francescopolimeni05-cmd
 Brice Da Costa - dacobri
-Simon - smelkk
+Simon Melkonyan - smelkk

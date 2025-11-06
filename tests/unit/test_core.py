@@ -85,8 +85,6 @@ def test_word_count():
 
     print("All tests passed!")
 
-
-
 def test_truncatestring_short_text():
     # Text shorter than max_length → unchanged
     assert c.truncatestring("hello", 10) == "hello"
