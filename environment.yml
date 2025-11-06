@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.12
   - pip
+  - ipykernel
   - pytest=8.4.2
   - pytest-cov=7.0.0
   - pandas=2.2.3
